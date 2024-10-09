@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Providers</title>
+</head>
+<body>
+    <h1>Providers specializing in <%= providers[0]?.provider_specialty %></h1>
+    <ul>
+        <% providers.forEach(provider => { %>
+            <li><%= provider.first_name %> <%= provider.last_name %> - Specialty: <%= provider.provider_specialty %></li>
+        <% }) %>
+    </ul>
+    <a href="/providers">Back to all providers</a>
+</body>
+</html>
